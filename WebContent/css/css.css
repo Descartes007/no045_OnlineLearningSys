@@ -1,0 +1,312 @@
+BODY {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 2px
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+h {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TH {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+LI {
+	LIST-STYLE-TYPE: none
+}
+UL {
+	LIST-STYLE-TYPE: none
+}
+TD {
+	VERTICAL-ALIGN: top; COLOR: #333333
+}
+INPUT {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid
+}
+TEXTAREA {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid
+}
+.wrap {
+	MARGIN: auto; WIDTH: 950px
+}
+#banner_ad {
+	MARGIN-TOP: 5px
+}
+A {
+	FONT-SIZE: 12px
+}
+A:link {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #4e667b; TEXT-DECORATION: underline
+}
+A:active {
+	TEXT-DECORATION: none
+}
+#toplogin {
+	BACKGROUND: #e3f5fc; HEIGHT: 20px
+}
+#toplogin .jstime {
+	MARGIN-TOP: 5px; MARGIN-RIGHT: 5px
+}
+#toplogin INPUT.login_name {
+	WIDTH: 90px; HEIGHT: 15px
+}
+#toplogin INPUT.login_pwd {
+	WIDTH: 90px; HEIGHT: 15px
+}
+#toplogin INPUT.login_sub {
+	BACKGROUND: #d2e4fc; WIDTH: 40px; HEIGHT: 19px
+}
+#header DIV {
+	FLOAT: left
+}
+#header DIV.ad {
+	FLOAT: center
+}
+#header {
+	BORDER-TOP: #ccc 1px solid; MARGIN-BOTTOM: 10px
+}
+#header TD {
+	PADDING-TOP: 8px
+}
+#guide {
+	BORDER-TOP: 1px solid; MARGIN-TOP: 1px; BACKGROUND: #cccccc; BORDER-BOTTOM: 0px solid; HEIGHT: 18px
+}
+#guide TD {
+	BORDER-RIGHT: #fff 0px solid; PADDING-RIGHT: 3px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 4px; BORDER-LEFT: #fff 0px solid; PADDING-TOP: 6px; BORDER-BOTTOM: #fff 1px solid
+}
+#guide2 {
+	BACKGROUND: #f5fafe; BORDER-BOTTOM: #cccccc 1px solid; HEIGHT: 24px
+}
+#guide2 TD {
+	PADDING-LEFT: 2px; PADDING-TOP: 6px
+}
+.chooseGuide {
+	BORDER-BOTTOM: #333 1px dotted
+}
+.MainTable .guide {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; MARGIN-TOP: 5px; BACKGROUND: url() #f5fafe; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid; HEIGHT: 20px
+}
+.MainTable .guide TD {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+.dragTable {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; MARGIN-TOP: 5px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 100%; BORDER-BOTTOM: #cccccc 1px solid
+}
+.dragTable .head {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 1.8em; BACKGROUND: url(/studyonline/img/head1.gif); BORDER-LEFT: #fff 1px solid; PADDING-TOP: 7px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 20px
+}
+.dragTable .TAG {
+	FONT-WEIGHT: bold; FLOAT: left; COLOR: #000066;
+}
+.dragTable .TAG2 {
+	FONT-WEIGHT: bold; FLOAT: left; COLOR: #EC3A06
+}
+.dragTable .TAG A {
+	COLOR: #000066
+}
+.dragTable .more A {
+	COLOR: #000066; MARGIN-RIGHT: 1em
+}
+.MainTable {
+	MARGIN-TOP: 5px
+}
+.MainTable .Side .dragTable {
+	WIDTH: 100%
+}
+.MainTable .Side .dragTable .middle {
+	
+}
+.dragTable .middle {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 7px; PADDING-BOTTOM: 4px; LINE-HEIGHT: 20px; PADDING-TOP: 6px; HEIGHT: 50px
+}
+.MainTable .Side .dragTable .middle UL LI {
+	OVERFLOW: hidden; WIDTH: 210px; WHITE-SPACE: nowrap; TEXT-OVERFLOW: ellipsis
+}
+.MainTable .Side .dragTable .middle UL LI A {
+	DISPLAY: block; BACKGROUND: url() no-repeat left 50%; MARGIN-LEFT: 4px; TEXT-INDENT: 0.6em
+}
+#AutoRows .dragTable .middle {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; HEIGHT: 100px
+}
+#AutoRows .dragTable UL LI {
+	DISPLAY: block; BACKGROUND: url() no-repeat 0px 40%; TEXT-INDENT: 0.6em; LINE-HEIGHT: 18px
+}
+#AutoRows .dragTable .list_title {
+	BACKGROUND: url() no-repeat 0px 40%; TEXT-INDENT: 0.6em; LINE-HEIGHT: 18px
+}
+.listpic {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 4px; FLOAT: left; PADDING-BOTTOM: 3px; WIDTH: 127px; PADDING-TOP: 3px
+}
+.listpic .title {
+	OVERFLOW: hidden; WIDTH: 127px; WHITE-SPACE: nowrap; TEXT-OVERFLOW: ellipsis; TEXT-ALIGN: center
+}
+.listpic IMG {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; BORDER-LEFT: #fff 1px solid; WIDTH: 120px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 90px
+}
+.listpic .img A {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; DISPLAY: block; MARGIN-BOTTOM: 5px; BORDER-LEFT: #ccc 1px solid; WIDTH: 120px; BORDER-BOTTOM: #ccc 1px solid; HEIGHT: 90px; TEXT-ALIGN: center
+}
+.listarticle TD {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; PADDING-TOP: 7px; BORDER-BOTTOM: #ccc 1px dashed
+}
+.listarticle SPAN {
+	DISPLAY: block; FLOAT: left
+}
+.listarticle SPAN.title {
+	BACKGROUND: url() no-repeat 0em 40%; TEXT-INDENT: 0.6em
+}
+.listarticle SPAN.time {
+	FLOAT: right
+}
+.page {
+	CLEAR: both; MARGIN-TOP: 1em; WIDTH: 98%
+}
+.page A {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #ccc 1px solid; DISPLAY: block; PADDING-LEFT: 4px; FLOAT: left; PADDING-BOTTOM: 1px; BORDER-LEFT: #ccc 1px solid; MARGIN-RIGHT: 3px; PADDING-TOP: 2px; BORDER-BOTTOM: #ccc 1px solid
+}
+.content_word {
+	FONT-SIZE: 15px
+}
+.content_word P {
+	FONT-SIZE: 15px
+}
+.ListPhoto UL {
+	DISPLAY: block; MARGIN: 8px 8px 0px 10px; WIDTH: 96%; BORDER-BOTTOM: #ccc 1px dotted; HEIGHT: 100px
+}
+.ListPhoto UL LI {
+	DISPLAY: block; FLOAT: left
+}
+.ListPhoto UL LI.img {
+	BORDER-RIGHT: #ccc 1px dotted; WIDTH: 130px
+}
+.ListPhoto UL LI.img IMG {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid
+}
+.ListPhoto UL LI.img A {
+	BORDER-RIGHT: #333 1px solid; BORDER-TOP: #333 1px solid; DISPLAY: block; BACKGROUND: #eee; BORDER-LEFT: #333 1px solid; WIDTH: 120px; BORDER-BOTTOM: #333 1px solid; HEIGHT: 90px; TEXT-ALIGN: center
+}
+.ListPhoto UL LI.word {
+	MARGIN-LEFT: 1em
+}
+.ListPhoto UL LI.word SPAN {
+	DISPLAY: block
+}
+.ListPhoto UL LI.word SPAN.title A {
+	FONT-WEIGHT: bold
+}
+#comment .content {
+	BORDER-RIGHT: #ddd 1px dotted; BORDER-TOP: #ddd 1px dotted; MARGIN-BOTTOM: 10px; BORDER-LEFT: #ddd 1px dotted; BORDER-BOTTOM: #ddd 1px dotted
+}
+#comment .content .word {
+	PADDING-LEFT: 5px; BORDER-BOTTOM: #ddd 1px solid; HEIGHT: 50px
+}
+#comment .content .img {
+	BORDER-RIGHT: #ddd 1px dotted; PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; PADDING-TOP: 1em
+}
+#comment .content .info {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; PADDING-TOP: 2px
+}
+.guestbook {
+	BORDER-RIGHT: #cccccc 1px dotted; BORDER-TOP: #cccccc 1px dotted; MARGIN-BOTTOM: 4px; BORDER-LEFT: #cccccc 1px dotted; BORDER-BOTTOM: #cccccc 1px dotted
+}
+.guestbook .Ftd {
+	BORDER-RIGHT: #cccccc 1px dotted; PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px
+}
+.guestbook .Atd {
+	BORDER-TOP: #d2e4fc 1px solid; PADDING-LEFT: 4px
+}
+.guestbook .Ctd {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px
+}
+#footer {
+	BORDER-TOP: #cbcbcb 1px solid; MARGIN-TOP: 4px
+}
+#footer TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 1em; PADDING-TOP: 1em
+}
+.Space {
+	MARGIN-TOP: 4px; BACKGROUND: url(); HEIGHT: 23px
+}
+.Space .L {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; COLOR: #fff; PADDING-TOP: 5px
+}
+.Space .L {
+	FLOAT: left
+}
+.Space .R {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 0px; PADDING-TOP: 5px
+}
+#AjaxEditTable {
+	BORDER-RIGHT: #beddff 1px solid; BORDER-TOP: #beddff 1px solid; BACKGROUND: #fff; BORDER-LEFT: #beddff 1px solid; BORDER-BOTTOM: #beddff 1px solid
+}
+#AjaxEditTable .head {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 7px; BACKGROUND: #dbeaff; PADDING-BOTTOM: 0px; PADDING-TOP: 3px; BORDER-BOTTOM: #beddff 1px solid; HEIGHT: 21px
+}
+#AjaxEditTable .head A {
+	COLOR: #fff
+}
+#AjaxEditTable .head SPAN {
+	DISPLAY: block; FLOAT: right
+}
+#AjaxEditTable .middle {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; BACKGROUND: #fff; PADDING-BOTTOM: 5px; LINE-HEIGHT: 18px; PADDING-TOP: 5px
+}
+#AjaxEditTable .middle INPUT {
+	BORDER-RIGHT: #beddff 1px solid; BORDER-TOP: #beddff 1px solid; BACKGROUND: #fff; BORDER-LEFT: #beddff 1px solid; BORDER-BOTTOM: #beddff 1px solid
+}
+#AjaxEditTable .middle TEXTAREA {
+	BORDER-RIGHT: #beddff 1px solid; BORDER-TOP: #beddff 1px solid; BACKGROUND: #fff; BORDER-LEFT: #beddff 1px solid; BORDER-BOTTOM: #beddff 1px solid
+}
+.showsortname {
+	PADDING-LEFT: 0.3em; FONT-WEIGHT: bold; BACKGROUND: url() no-repeat 0.3em 0px; FLOAT: left; TEXT-INDENT: 1.5em
+}
+.list_sortTCP {
+	MARGIN-BOTTOM: 12px; WIDTH: 99%
+}
+.list_sortTCP .pic {
+	PADDING-RIGHT: 1em
+}
+.list_sortTCP .content {
+	TEXT-INDENT: 2em; BORDER-BOTTOM: #ccc 1px dotted
+}
+.list_sortTC {
+	MARGIN-BOTTOM: 5px; WIDTH: 99%; BORDER-BOTTOM: #ccc 1px dotted
+}
+.list_sortTC .content {
+	TEXT-INDENT: 2em
+}
+#menuTable {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BACKGROUND: #f5fcfe; FILTER: Alpha(Opacity=80); BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid
+}
+#menuTable TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; PADDING-BOTTOM: 3px; LINE-HEIGHT: 15px; PADDING-TOP: 3px
+}

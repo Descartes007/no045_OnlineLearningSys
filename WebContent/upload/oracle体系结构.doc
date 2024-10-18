@@ -1,0 +1,208 @@
+1.从存储结构划分：物理结构和逻辑存储结构
+  从实例结构划分：内存结构和进程结构
+2.物理上有三种文件组成：
+	数据文件*.dbf 控制文件*.ctl 重做日志文件*.log
+数据文件：数据库中的所有数据最终都会保存到数据文件中，具有缓存功能
+	查看数据文件：select file_name from dba_data_files;
+控制文件：二进制结构文件，用来描述和维护数据库的物理结构。
+	查看控制文件：select name from v$controlfile;
+日志文件:记录数据库中所有修改信息的文件，可用于备份与恢复操作。
+
+逻辑结构
+数据库->表空间->段->区->数据块
+表空间:最大的逻辑存储结构,用于与物理上一个或者多个数据文件对应，创建数据库时会同时创建表空间。
+系统默认安装的表空间:system,sysaux,temp,undotbsl,users,example
+查询数据库表空间:select tablespace_name from dba_tablespaces;
+
+oracle内存结构
+1.系统全局区(SGA):用于用户进程贡献，大小有参数sga_max_size决定。 
+	查看SGA大小：show parameter sga_max_size;
+2.程序全局区(PGA):包含单个用户或服务器数据和控制信息，私有，oracle系统自动分配
+	查看PGA大小：show parameter pga_aggregate_target;
+3.排序区:内存排序区和磁盘临时段，优先使用内存排序区。
+	查看排序区大小：show parameter sort_area_size;
+4.大型池：用于数据库的备份与恢复
+	查看大型池大小:show parameter large_pool_size;
+5.java池：用于支持Java的运行
+	查看Java池大小：show parameter java_pool_size;
+
+数据字典
+数据字典用于存放数据库中所有对象信息的知识库。
+例如：表，视图，索引，包，存储过程，用户，权限，角色，审计，约束
+数据字典视图分类
+USER：以user_为前缀，记录用户对象信息。
+ALL：以all_为前缀，记录用户对象信息，被授权访问对象信息
+DBA：以dba_为前缀，记录数据库实例的所有对象信息
+V$:以v$为前缀，记录数据库活动性能相关的动态信息
+GV$:以gv$为前缀，记录分布式环境下所有动态信息
+
+
+oracle数据库命令
+help [topic]
+host 切换操作系统环境
+host+操作系统命令 执行操作系统命令 
+clear scr[een]
+show ALL|USER|SGA|ERRORS|REL[RASE]|PARAMETE RS
+DESC [RIBE] 查看对象结构
+
+编辑SQL语句
+append
+change /old/new
+del n
+clear buffer
+n
+list
+run
+SAVE FILE file_name CREATE REPLACE APPEND 将缓冲区内容保存到文件中
+GET [FILE] file_name [list|nolist] 读取文件内容到缓冲区
+START [RT] {url|file_name} 读取缓冲区的内容并运行
+EDIT [file_name]  编辑缓冲区内容
+SPOOL [file_name] [create|replace|append|off|out] 将输出结果到文件
+
+临时变量：在某个变量前使用&符号。 &&定义临时变量
+设置是否显示原值与新值 :set verify on|off
+
+定义变量:define accpet
+define  variable|variable=value
+accept 交互式的定义变量:
+accept variable[data_type][fromat][default][prompt text|noprompt][hide]
+exp:accept test number fromat 9999 peompt 'hi please input a number:' hide;
+删除变量命令:undefine
+
+格式化列的显示效果,字段替换，别名
+column [{column_name|ALIAS alias}[option]]
+
+pagesize，linesize设置显示页面内容的大小
+
+
+Oracle表空间
+建立表空间和用户的步骤：  
+用户  
+建立：create user 用户名 identified by "密码";  
+授权：grant create session to 用户名;  
+            grant create table to  用户名;  
+            grant create tablespace to  用户名;  
+            grant create view to  用户名; 
+
+表空间  
+建立表空间(一般建N个存数据的表空间和一个索引空间)：  
+create tablespace 表空间名  
+datafile ' 路径(要先建好路径)\***.dbf  ' size *M  
+tempfile ' 路径\***.dbf ' size *M  
+autoextend on  --自动增长  
+--还有一些定义大小的命令，看需要  
+ default storage(  
+ initial 100K,  
+ next 100k,  
+);  
+
+
+例子：创建表空间  
+create tablespace DEMOSPACE   
+datafile 'E:/oracle_tablespaces/DEMOSPACE_TBSPACE.dbf'   
+size 1500M   
+autoextend on next 5M maxsize 3000M;  
+删除表空间  
+drop tablespace DEMOSPACE including contents and datafiles  
+
+用户权限  
+授予用户使用表空间的权限：  
+alter user 用户名 quota unlimited on 表空间;  
+或 alter user 用户名 quota *M on 表空间;
+
+表空间的状态属性
+4种 online|offline|read only|read write
+设置在线状态:alter tablespace tablespace_name online
+设置online状态才允许进行read or write 操作
+offline状态用于对表空间进行脱机备份，升级应用程序
+alter tablespace tablespace_name offline parameter
+[normal|temporary|immediate|for recovry]
+
+
+1.增加表空间大小
+ 创建表空间的时候需要在磁盘上创建相应的数据文件。
+ 增加表空间可以增大数据文件大小或者增加一个新的数据文件
+alter database datafile file_name resize newsize K|M
+alter tablespace tablespace_name add datafile file_name
+size number K|M [autoextend on |off [next number K|M maxsize unlimited |number K|M]]
+
+对表空间的数据文件进行移动操作
+1.设置表空间为offline状态
+2.拷贝数据文件到指定位置
+3.alter tablespace tablespace_name 
+  rename datafile 'file_name_old' to 'file_nmae_new'
+4.设置表空间为online状态
+
+2.重命名表空间
+不能修改系统表空间system与sysaux的名称。
+alter tablespace tablespace_name rename to new_tablespace_name
+如果表空间的状态为offline，则无法修改。
+
+3.删除表空间
+drop tablespace tablespace_nmae [including contents [and datafiles]]
+
+
+临时表空间
+创建临时表空间，对应的是临时文件
+temporary  -------- tempfile
+create temporary tablespace mytemp 
+tempfile 'D:\temp.dbf' size 5M autoextend on next 2M maxsize 20M
+修改临时表空间
+add tempfile  resize  offline online
+
+创建表空间组
+tablespace group group_name
+
+
+大文件表空间
+解决存储文件大小不够的问题，普通只能支持4M大小，大文件表空间可以支持4G数据块大小。
+create bigfile tablespace mybigspace datafile 'url' size 10M
+
+非标准数据块表空间
+参数db_block_size
+alter system set db_16K_cache_size =16M
+
+撤销表空间
+undo_tablespace
+create undo tablespace undo_tablespace_name datafile 'url' size autoextend next maxsize
+alter system set undo_retention=value
+
+
+日志表空间 v$logfile v$log
+1.创建日志表空间
+alter database database_name add logfile[group group_name](file_name) size reuse
+alter database add logfile member 'url' to group_name
+
+2.重新定义日志文件
+1.以系统用户登录
+2.执行shutdown命令
+3.startup mount
+4.alter database rename file 'old_file_url' to 'new_file_url'
+5.alter database open
+
+3.切换日志文件组
+alter system switch logfile;
+
+4.清空日志文件组，日志组不能处于current状态
+alter database clear logfile group_name
+
+5.删除日志文件，日志不能处于current状态，需要修改为inactive。
+alter database drop logfile member logfile_name
+
+日志组的状态：active,current,inactive,unused
+日志文件的状态：valid,invalid,stale,
+
+归档日志模式archivelog如果发生日志切换，则日志中的原有内容会被复制到指定位置
+非归档日志模式noarchivelog 如果发生日志切换，则日志中的原有内容被新的覆盖
+
+设置归档目标
+alter system set log_archive_dest_N='{location|server}=directory'
+
+
+oracle表
+1.数据类型:
+char,vachar,nchar,nvachar2,number,numberic,int,integer,smallint,binary_float,
+date,timestamp,clob,nclob,blob,bfile,
+2.创建表
+create table[schema]table_name(column_name data_type[default expression]
+[[constraint constraint_name]constraint_def])[tablespace tablespace_name];
